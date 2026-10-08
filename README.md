@@ -2,144 +2,62 @@
 
 ### Machine Learning-Based Loan Approval Prediction
 
-LoanIQ is a **machine learning project** that analyzes applicant and financial information to predict whether a loan application is likely to be approved.
+**LoanIQ** is a machine learning project built to explore how applicant and financial information can be used to predict **loan approval outcomes**.
 
-The project combines **data preprocessing, exploratory data analysis, and machine learning** to identify patterns in historical loan applications and build a predictive model.
+The project focuses on the complete ML workflow, from cleaning and understanding the data to preprocessing, feature engineering, model training, and evaluation.
 
----
+## 📌 What I Did
 
-## 🚀 Project Overview
+- Cleaned and handled missing values in the dataset
+- Performed **Exploratory Data Analysis (EDA)** to understand loan approval patterns
+- Encoded categorical variables and prepared features for modelling
+- Used **train-test splitting and feature scaling**
+- Compared multiple classification models
+- Applied feature engineering to improve the model
 
-Loan approval decisions can depend on several factors, including an applicant's income, credit score, existing loans, savings, debt-to-income ratio, collateral, and loan requirements.
+## 🤖 Models Compared
 
-**LoanIQ** explores these factors and uses machine learning to predict the `Loan_Approved` outcome.
+I experimented with:
 
-### 🎯 Objective
+- Logistic Regression
+- K-Nearest Neighbors (KNN)
+- Gaussian Naive Bayes
 
-> Build a machine learning model capable of predicting loan approval outcomes from applicant and financial data.
+### 🏆 Best Model: Gaussian Naive Bayes
 
----
+Based on **precision**, Gaussian Naive Bayes performed best among the models tested.
+
+After feature engineering, the Naive Bayes model achieved:
+
+**Precision: 81.13%**
+
+The project uses precision as the primary basis for selecting the best model.
 
 ## 📊 Dataset
 
-The dataset contains **1,000 loan application records** with **20 features** covering applicant demographics, financial information, employment details, and loan characteristics.
+The dataset contains **1,000 loan application records** with information such as:
 
-### Key Features
+- Applicant & coapplicant income
+- Credit score
+- Existing loans
+- DTI ratio
+- Savings
+- Collateral value
+- Loan amount and term
+- Employment and education details
 
-- 💰 Applicant Income
-- 👥 Coapplicant Income
-- 💼 Employment Status
-- 🎂 Age
-- 👨‍👩‍👧 Dependents
-- 📈 Credit Score
-- 💳 Existing Loans
-- 📉 DTI Ratio
-- 💵 Savings
-- 🏠 Collateral Value
-- 💸 Loan Amount
-- 📅 Loan Term
-- 🎓 Education Level
-- 🏢 Employer Category
-- 📍 Property Area
-- 🎯 Loan Purpose
-
-**Target Variable:** `Loan_Approved`
-
----
-
-## 🔄 Project Workflow
-
-```text
-Raw Dataset
-     ↓
-Data Inspection
-     ↓
-Missing Value Treatment
-     ↓
-Exploratory Data Analysis
-     ↓
-Feature Preparation
-     ↓
-Train/Test Split
-     ↓
-Machine Learning Model
-     ↓
-Prediction & Evaluation
-```
-
----
-
-## 🧹 Data Preprocessing
-
-The project handles missing values using appropriate imputation techniques:
-
-- Numerical features → Mean imputation
-- Categorical features → Most-frequent value imputation
-
-After preprocessing, the dataset contains no missing values.
-
----
-
-## 📈 Exploratory Data Analysis
-
-EDA is performed to understand the dataset and investigate loan approval patterns.
-
-The analysis includes:
-
-- Distribution of loan approval outcomes
-- Applicant and financial characteristics
-- Numerical feature analysis
-- Categorical feature analysis
-- Relationships between applicant attributes and loan approval
-
----
+The target variable is **`Loan_Approved`**.
 
 ## 🛠️ Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| 🐍 Python | Core programming |
-| 🐼 Pandas | Data manipulation |
-| 🔢 NumPy | Numerical computing |
-| 📊 Matplotlib | Data visualization |
-| 🎨 Seaborn | Statistical visualization |
-| 🤖 Scikit-learn | Machine learning |
-| ☁️ Google Colab | Development environment |
+**Python | Pandas | NumPy | Matplotlib | Seaborn | Scikit-learn | Google Colab**
 
+## 🎯 What I Learned
 
----
+This project helped me understand how a real machine learning workflow comes together, especially **data preprocessing, EDA, feature engineering, model comparison, and evaluation**.
 
-## 💡 Key Learning Outcomes
+It was also a good exercise in understanding that the model with the highest accuracy is not automatically the best choice. Sometimes one metric matters more depending on the problem. Humanity survives another spreadsheet.
 
-Through this project, I worked on:
+## 🚀 Future Improvements
 
-- Data cleaning and preprocessing
-- Handling missing values
-- Exploratory Data Analysis
-- Feature understanding and preparation
-- Machine learning workflow
-- Classification-based prediction
-- Data visualization using Python
-
----
-
-
-
-## 📌 Future Improvements
-
-- Compare multiple classification algorithms
-- Perform hyperparameter tuning
-- Improve model evaluation
-- Add feature importance analysis
-- Build a simple web interface for loan predictions
-- Deploy the trained model as an application
-
----
-
-## 👨‍💻 Author
-
-**Aksh**
-
-Built as a practical machine learning project to explore how data-driven models can be applied to financial decision-making.
-
-⭐ If you find this project useful, consider giving the repository a star!
+I’d like to extend LoanIQ by adding model tuning, better feature selection, explainability, and a simple interface for making predictions on new loan applications.
